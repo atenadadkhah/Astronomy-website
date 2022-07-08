@@ -1,0 +1,26 @@
+@import "../var","../mixin","../fonts","../base/base";
+body{
+  background-color: #060606;
+}
+.hero{
+  @include size(100vw,100vh);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.6),transparent),url("../../img/about.jpg") no-repeat center top/cover ;
+  header section{
+    float: left;
+    p{
+      color: $white-text;
+      margin-top: 1rem;
+    }
+  }
+  h1{
+    @include textStyle("sogand",5rem,$white-text,3px);
+    opacity: 60%;
+    @include media(1px,500px){
+      font-size: 3.5rem;
+    }
+  }
+
+}
+.school{
+  @include textStyle("lalezar",1.3rem);
+}

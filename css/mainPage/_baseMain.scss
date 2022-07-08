@@ -1,0 +1,143 @@
+.hero{
+  background-image: linear-gradient(-25deg,$bg-orange 0%,$bg-orange 10%,$bg-hero 10%,$bg-hero 80%,$bg-yellow 10%);
+  .header{
+    h1{
+      @include  textStyle($font-primary,4.5em, #e2e2e2 !important,3px)
+    }
+    p{
+      @include  textStyle($font-secondary,1.3rem)
+    }
+    #earth{
+      direction: ltr;
+    }
+    canvas{
+      @include size(80vmin,80vmin,block);
+      opacity: 0.4;
+      @include media(1px,1220px){
+        @include size(67vmin,67vmin,block);
+      }
+    }
+  }
+}
+.introduction{
+  height: 500px;
+  background-image:linear-gradient(to bottom, #00060c,#000b1a,#00060c);
+  position: relative;
+  strong{
+    @include textStyle("vazir-regular",initial,darken($bg-blue,17%),$align:center);
+  }
+  .tri-introduction{
+    fill: $bg-info;
+  }
+  .introduction-img{
+    @include media(1px,800px){
+      background:url("../../img/2565878-solar-system.jpg")  no-repeat center left/contain;
+    }
+    @include size(100%,500px);
+    @include media(801px){
+      background: url("../../img/565878-solar-system.jpg") no-repeat center left/contain ;
+    }
+    opacity: .25;
+  }
+  .card-explain{
+    .card{
+      box-shadow: 1px 1px 8px greenyellow;
+      border-radius: 1.5rem ;
+      &-header{
+        border: none;
+        border-radius: 1.5rem ;
+      }
+      .card-title{
+        @include textStyle($font-primary,$letter:1.5px);
+      }
+      .card-body{
+        p{
+          @include textStyle($font-secondary,1.3em)
+        }
+      }
+    }
+    @include media(1px,992px){
+      @include position(absolute,50%,50%);
+      transform: translate(-50%,-50%);
+    }
+    @include media(992.99px){
+      @include position(absolute,$r:20vw,$t:50%);
+    }
+    transform: translateY(-50%);
+    z-index: 99;
+  }
+}
+.guide-section{
+  overflow: hidden;
+  @extend %clearfix;
+  background-color: $bg-white;
+  .box{
+    @include size(120px,120px);
+    border-radius: 30px;
+  }
+  @each $key,$value in $bg-lightColors{
+    .box-#{$key}{
+      background-color: lighten($value,10%);
+    }
+  }
+  .guide-description{
+    h4{
+      @include textStyle("lalezar",$letter:.5px)
+    }
+    p{
+      @include textStyle("vazir-regular",$color:$muted-text);
+    }
+  }
+  .tri-guide{
+    float: left;
+    fill: $bg-purple;
+  }
+}
+.adventure-section{
+  background-image: linear-gradient(to right , #01011f, #210b32,#01011f);
+  overflow: hidden;
+  .tri-astronaut{
+    &-1{
+      @include media(1px,645px){
+        @include position(absolute,30%,$r:6%);
+      }
+      @include media(646px){
+        @include position(absolute,30%,$r:14%);
+      }
+      fill: yellow;
+    }
+    &-2{
+      @include position(absolute,50%,$r:60%);
+      fill: $bg-orange;
+    }
+    &-3{
+      @include media(1px,645px){
+        @include position(absolute, 80%, $r: 60%);
+      }
+      @include media(646px) {
+        @include position(absolute, 65%, $r: 60%);
+      }
+      fill: $bg-blue;
+    }
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  h3{
+    @include textStyle("sogand",$letter:1px);
+  }
+  p{
+    @include textStyle("vazir-regular");
+  }
+}
+.galaxy-count{
+  background-color: $bg-white;
+  h4{
+    @include textStyle('sogand' !important,$letter:1.5px);
+  }
+  .planet-title{
+    @include textStyle("lalezar",1.3rem);
+  }
+}
+

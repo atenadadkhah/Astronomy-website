@@ -1,0 +1,139 @@
+body{
+  overflow-x: hidden;
+  padding: 0 !important;
+  unicode-bidi: bidi-override !important;
+  direction: unset !important;
+  text-align:right;
+}
+
+.slick-slider * , .uploadcare--dialog *{
+  direction: ltr;
+}
+:not(.slick-slider  *,.uploadcare--dialog *){
+  text-align: right;
+  direction: rtl;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+%clearfix{
+  &::after{
+    clear: both;
+    display: table;
+    content: "";
+  }
+}
+.modal-open .modal{
+  overflow-y: hidden;
+}
+.modal{
+  border-radius: 0;
+  & *{
+    @extend  .modal;
+  }
+h5 {
+  @include textStyle("lalezar", 2rem, darken($bg-blue, 35%));
+
+}
+  .modal-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 1px 7px #666;
+    border: none;
+  }
+}
+a{
+  @include textStyle($font-secondary !important);
+  &:hover{
+    text-decoration: none;
+  }
+}
+i{
+  vertical-align: middle;
+}
+p{
+  @include textStyle("vazir-regular");
+}
+.require{
+  color: tomato;
+}
+input,textarea,button,span.btn,small,address,.details span,q,strong{
+  @include textStyle("vazir-regular" !important);
+}
+.avatar {
+  font-size: 1rem;
+  @include size(48px,48px,inline-flex);
+  color: #fff;
+  border-radius: 50%;
+  background-color: #adb5bd;
+  align-items: center;
+  justify-content: center;
+}
+label,.label{
+  @include textStyle("lalezar",1.3rem);
+}
+.toTop{
+  text-align: center;
+  @include  position(fixed,$r:2rem,$b:1rem,$z:9999999);
+  a{
+    background-color: $bg-blue;
+    border-radius: 50%;
+    padding: 13px 14px;
+    &:hover{
+      background-color: darken($bg-blue,30%);
+    }
+  }
+}
+.brand-name{
+  @include textStyle(('Righteous', cursive) !important,1.6rem,$bg-blue);
+}
+.nav-link:not(.active-nav){
+  color: $white-text;
+  &:hover{
+    color: darken($white-text,20%);
+  }
+}
+.active-nav{
+  color: $bg-blue;
+  &:hover{
+    color: darken($bg-blue,10%);
+  }
+}
+.hero{
+  @extend %clearfix;
+  .nav-side{
+    z-index: 9999999 !important;
+    @include media(1001px){
+      display: none !important;
+    }
+    display: none;
+  }
+  .nav-btn{
+    background-color: transparent !important;
+    color: #ececec;
+    opacity: .7;
+    &:hover{
+      color: #ececec !important;
+      opacity: 1 !important;
+    }
+    @include media(1001px){
+      display: none;
+    }
+  }
+  nav{
+    @include media(1px,1000px){
+      display: none;
+    }
+    a.nav-link{
+      @include textStyle($font-secondary,$opacity:.8)
+    }
+  }
+}
+footer{
+  background-color: rgb(2, 10, 38);
+  h5{
+    font-size: 2rem !important;
+  }
+}
+

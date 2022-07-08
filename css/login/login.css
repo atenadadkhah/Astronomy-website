@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Noto+Sans&family=Nunito:wght@600&family=Play&family=Righteous&family=The+Nautigal&display=swap");
+@font-face {
+  font-family: "sogand";
+  src: url("../../fonts/sogand/SOGAND.ttf") format("ttf");
+  src: url("../../fonts/sogand/SOGAND.eot") format("eot");
+  src: url("../../fonts/sogand/SOGAND.woff") format("woff");
+  src: url("../../fonts/sogand/SOGAND.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir-regular";
+  src: url("../../fonts/vazir/Vazir-Regular.ttf") format("ttf");
+  src: url("../../fonts/vazir/Vazir-Regular.eot") format("eot");
+  src: url("../../fonts/vazir/Vazir-Regular.woff") format("woff");
+  src: url("../../fonts/vazir/Vazir-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "lalezar";
+  src: url("../../fonts/lalezar/Lalezar-Regular.ttf") format("ttf");
+  src: url("../../fonts/lalezar/Lalezar-Regular.eot") format("eot");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff") format("woff");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff2") format("woff2");
+}
+body {
+  overflow-x: hidden;
+  padding: 0 !important;
+  unicode-bidi: bidi-override !important;
+  direction: unset !important;
+  text-align: right;
+}
+
+.slick-slider *, .uploadcare--dialog * {
+  direction: ltr;
+}
+
+:not(.slick-slider *, .uploadcare--dialog *) {
+  text-align: right;
+  direction: rtl;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.modal-open .modal, .modal-open .modal *, .modal .modal-open * {
+  overflow-y: hidden;
+}
+
+.modal, .modal * {
+  border-radius: 0;
+}
+.modal h5 {
+  font-family: "lalezar";
+  color: #00366b;
+  font-size: 2rem;
+}
+.modal .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 7px #666;
+  border: none;
+}
+
+a {
+  font-family: "vazir-regular" !important;
+}
+a:hover {
+  text-decoration: none;
+}
+
+i {
+  vertical-align: middle;
+}
+
+p {
+  font-family: "vazir-regular";
+}
+
+.require {
+  color: tomato;
+}
+
+input, textarea, button, span.btn, small, address, .details span, q, strong {
+  font-family: "vazir-regular" !important;
+}
+
+.avatar {
+  font-size: 1rem;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #adb5bd;
+  align-items: center;
+  justify-content: center;
+}
+
+label, .label {
+  font-family: "lalezar";
+  font-size: 1.3rem;
+}
+
+.toTop {
+  text-align: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 9999999;
+}
+.toTop a {
+  background-color: dodgerblue;
+  border-radius: 50%;
+  padding: 13px 14px;
+}
+.toTop a:hover {
+  background-color: #004384;
+}
+
+.brand-name {
+  font-family: "Righteous", cursive !important;
+  color: dodgerblue;
+  font-size: 1.6rem;
+}
+
+.nav-link:not(.active-nav) {
+  color: #efefef;
+}
+.nav-link:not(.active-nav):hover {
+  color: #bcbcbc;
+}
+
+.active-nav {
+  color: dodgerblue;
+}
+.active-nav:hover {
+  color: #0077ea;
+}
+
+.hero .nav-side {
+  z-index: 9999999 !important;
+  display: none;
+}
+@media only screen and (min-width: 1001px) {
+  .hero .nav-side {
+    display: none !important;
+  }
+}
+.hero .nav-btn {
+  background-color: transparent !important;
+  color: #ececec;
+  opacity: 0.7;
+}
+.hero .nav-btn:hover {
+  color: #ececec !important;
+  opacity: 1 !important;
+}
+@media only screen and (min-width: 1001px) {
+  .hero .nav-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 1000px) {
+  .hero nav {
+    display: none;
+  }
+}
+.hero nav a.nav-link {
+  font-family: "vazir-regular";
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #020a26;
+}
+footer h5 {
+  font-size: 2rem !important;
+}
+
+body {
+  background-color: #000315;
+}
+body .log-section {
+  position: relative;
+}
+body .color-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: orangered;
+}
+body .color-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  fill: #17a2b8;
+}
+
+small {
+  font-family: "vazir-regular";
+}
+
+.frame {
+  padding-bottom: 6rem;
+  background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)), url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+  background-size: cover;
+  margin: 0 auto 12rem;
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  padding-top: 40px;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+li {
+  padding-left: 10px;
+  font-size: 18px;
+  display: inline;
+  text-align: left;
+  text-transform: uppercase;
+  padding-right: 10px;
+  color: #ffffff;
+}
+
+.signIn-active a {
+  padding-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: solid 2px #1059FF;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.signIn-inactive a {
+  padding-bottom: 0;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.signUp-active a {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: solid 2px #1059FF;
+  padding-bottom: 10px;
+}
+
+.signUp-inactive a {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.form-signIn {
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 55px;
+  display: block;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form-signIn-left {
+  display: none;
+}
+
+.form-signUp {
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 55px;
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.form-signUp-left {
+  display: block;
+}
+
+#check.checked path {
+  stroke-dashoffset: 33px;
+  fill: rgba(255, 255, 255, 0.03);
+}
+
+.form-signIn input, .form-signUp input {
+  font-family: "vazir-regular";
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-styling {
+  width: 100%;
+  height: 35px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+label {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+
+:focus {
+  outline: none;
+}
+
+.form-signIn input:focus, textarea:focus, .form-signUp input:focus, textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding-right: 40px;
+  transition: background 0.5s ease;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #5b6387 inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+[type=checkbox]:not(:checked),
+[type=checkbox]:checked {
+  position: absolute;
+  display: none;
+}
+
+[type=checkbox]:not(:checked) + label,
+[type=checkbox]:checked + label {
+  position: relative;
+  padding-left: 85px;
+  padding-top: 2px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+[type=checkbox]:not(:checked) + label:before,
+[type=checkbox]:checked + label:before,
+[type=checkbox]:not(:checked) + label:after,
+[type=checkbox]:checked + label:after {
+  content: "";
+  position: absolute;
+}
+
+[type=checkbox]:not(:checked) + label:before,
+[type=checkbox]:checked + label:before {
+  width: 65px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  left: 0;
+  top: -3px;
+  transition: all 0.2s ease;
+}
+
+[type=checkbox]:not(:checked) + label:after,
+[type=checkbox]:checked + label:after {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  top: 7px;
+  left: 10px;
+  transition: all 0.2s ease;
+}
+
+/* on checked */
+[type=checkbox]:checked + label:before {
+  background: #0F4FE6;
+}
+
+[type=checkbox]:checked + label:after {
+  background: #ffffff;
+  top: 7px;
+  left: 45px;
+}
+
+[type=checkbox]:checked + label .ui,
+[type=checkbox]:not(:checked) + label .ui:before,
+[type=checkbox]:checked + label .ui:after {
+  position: absolute;
+  left: 6px;
+  width: 65px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+  transition: all 0.2s ease;
+}
+
+[type=checkbox]:not(:checked) + label .ui:before {
+  left: 32px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[type=checkbox]:checked + label .ui:after {
+  color: #ffffff;
+}
+
+[type=checkbox]:focus + label:before {
+  box-sizing: border-box;
+  margin-top: -1px;
+}
+
+.btn-signUp {
+  float: left;
+  font-family: "vazir-regular";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  padding: 8px 0;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 23px;
+  background-color: #1059FF;
+}
+
+.btn-signIn {
+  float: left;
+  font-family: "vazir-regular";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  padding: 8px 0;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 23px;
+  background-color: #1059FF;
+}
+
+button.btn-signUp:hover, button.btn-signIn:hover {
+  cursor: pointer;
+  background-color: #0F4FE6;
+  transition: background-color 0.5s;
+}
+
+/*# sourceMappingURL=login.css.map */

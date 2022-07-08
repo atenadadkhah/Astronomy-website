@@ -1,0 +1,50 @@
+@mixin  size($w,$h,$d:null){
+  width: $w;
+  height: $h;
+  display: $d;
+}
+@mixin position($p,$t:null,$l:null,$b:null,$r:null,$z:null){
+  position: $p;
+  top: $t;
+  left: $l;
+  bottom: $b;
+  right: $r;
+  z-index: $z;
+}
+@mixin font($family,$folder,$name){
+  @font-face {
+    font-family: $family;
+    src: url("../../fonts/#{$folder}/#{$name}.ttf") format("ttf");
+    src: url("../../fonts/#{$folder}/#{$name}.eot") format("eot");
+    src: url("../../fonts/#{$folder}/#{$name}.woff") format("woff");
+    src: url("../../fonts/#{$folder}/#{$name}.woff2") format("woff2");
+  }
+}
+@mixin textStyle($ff:null,$size:null,$color:null,$letter:null,$line:null,$opacity:null,$align:null,$weight:null){
+  font-family: $ff;
+  color: $color;
+  font-size: $size;
+  line-height: $line;
+  letter-spacing: $letter;
+  text-align: $align;
+  opacity:$opacity;
+  font-weight: $weight;
+}
+@mixin  media($args...){
+  @if length($args)==2{
+    @media only screen and (min-width: nth($args,1)) and (max-width: nth($args,2)) {
+      @content;
+    }
+  }@else {
+    @media only screen and  (min-width: nth($args,1)) {
+      @content;
+    }
+  }
+}
+@mixin move-top($top){
+  transition: 400ms;
+  &:hover{
+    transform: translateY(-1 * $top);
+  }
+}
+

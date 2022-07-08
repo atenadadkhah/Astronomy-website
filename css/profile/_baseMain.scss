@@ -1,0 +1,220 @@
+h1,h2,h3,h4,h5,h6{
+  @include textStyle("vazir-regular" );
+}
+h1{
+  @include media(1px,580px){
+    font-size: 3.5rem !important;
+  }
+}
+label,.label{
+  @include textStyle("lalezar" ,1.3em,$bg-blue );
+}
+h3{
+  @include textStyle("vazir-regular" !important,initial,lighten($bg-hero,10%));
+}
+p,dfn,small,dfn span,input{
+  @include textStyle("vazir-regular" ,initial,lighten($muted-text,20%) ,.7px);
+}
+body + textarea{
+  max-height: 500px !important;
+  min-height: 100px;
+  background-color: $bg-hero !important;
+}
+.img-avatar{
+  cursor: pointer;
+}
+.active-avatar{
+  border-radius: 50%;
+  border: 4px solid lighten($bg-hero,10%);
+}
+.profile-circle{
+  background-image: linear-gradient(to bottom, #d6f3ed,transparent, #d6f3ed,transparent 99%);
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.description{
+  @include textStyle("vazir-regular",1rem,lighten($muted-text,5%));
+}
+summary::marker{
+  color: lighten($bg-hero,15%);
+}
+.no-cursor{
+  cursor: auto !important;
+}
+.show-more:hover{
+  box-shadow: none;
+}
+.message{
+  @include textStyle($font-secondary);
+}
+[name='message'].form-control{
+  background-color: #e8f0fe !important;
+}
+.img-button{
+  border: none;
+  outline: none;
+
+  background: transparent;
+  &:hover{
+    @extend .img-button;
+  }
+}
+.chat{
+  height: 345px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.message-error h5{
+  @include textStyle("lalezar");
+}
+.box {
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.error {
+  background: linear-gradient(to bottom right, #ff928b 40%, #d7816a 100%);
+}
+.face {
+  border-radius: 50%;
+  @include size(50px,50px,flex);
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  @include position(absolute,60px,$z:1);
+}
+.eye-left,
+.eye-right {
+  @include size(5px,5px);
+  border-radius: 50%;
+  background-color: #000;
+  margin-bottom: 0.5em;
+}
+.mouth {
+  @include size(8px,2px);
+  border: 2px solid #000;
+  border-radius: 50%;
+  border-color: transparent transparent #000 transparent;
+  padding: 0.8em;
+}
+.frown {
+  margin-top: 2.5em;
+  transform: rotate(180deg);
+}
+.sad {
+  animation: roll 3s ease-in infinite;
+}
+.follow {
+  animation: follow 3s ease-in infinite;
+}
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(0.85);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+  50% {
+    transform: rotate(175deg);
+    left: 50%;
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+}
+
+@keyframes follow {
+  0% {
+    left: 25%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+
+.chat-thread {
+  position: relative;
+  li {
+    position: relative;
+    clear: both;
+    display: inline-block;
+    padding: 16px 40px 5px 20px;
+    margin: 0 0 20px 0;
+    @include textStyle($font-secondary);
+    border-radius: 10px;
+    background-color: rgba(25, 147, 147, 0.2);
+    @include media(1200px){
+      max-width: 250px;
+      font-size: .9rem;
+    }
+    @include media(1px,1200px){
+      max-width: 56vw;
+      font-size: 1rem;
+    }
+    @include media(1200px,1370px){
+      max-width: 200px;
+      font-size: .9rem;
+    }
+
+  }
+
+}
+/* Chat - Speech Bubble Arrow */
+.chat-thread li:after {
+  content: "";
+  @include position(absolute,$b:0);
+  @include size(0,0);
+  border-top: 30px solid rgba(25, 147, 147, 0.2);
+}
+
+.me{
+  float: right;
+  li{
+    border-bottom-right-radius: 2px;
+  }
+}
+.friend{
+  float: left;
+  li{
+    border-bottom-left-radius: 2px;
+  }
+}
+.me,.friend{
+  clear: both;
+}
+
+.me li:after {
+  border-right: 15px solid transparent;
+  right: -15px;
+
+}
+
+
+.friend li:after {
+  border-left: 15px solid transparent;
+  left: -15px;
+}
+small.time{
+  @include textStyle($font-secondary ,.8em !important);
+}

@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Noto+Sans&family=Nunito:wght@600&family=Play&family=Righteous&family=The+Nautigal&display=swap");
+@font-face {
+  font-family: "sogand";
+  src: url("../../fonts/sogand/SOGAND.ttf") format("ttf");
+  src: url("../../fonts/sogand/SOGAND.eot") format("eot");
+  src: url("../../fonts/sogand/SOGAND.woff") format("woff");
+  src: url("../../fonts/sogand/SOGAND.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir-regular";
+  src: url("../../fonts/vazir/Vazir-Regular.ttf") format("ttf");
+  src: url("../../fonts/vazir/Vazir-Regular.eot") format("eot");
+  src: url("../../fonts/vazir/Vazir-Regular.woff") format("woff");
+  src: url("../../fonts/vazir/Vazir-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "lalezar";
+  src: url("../../fonts/lalezar/Lalezar-Regular.ttf") format("ttf");
+  src: url("../../fonts/lalezar/Lalezar-Regular.eot") format("eot");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff") format("woff");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff2") format("woff2");
+}
+body {
+  overflow-x: hidden;
+  padding: 0 !important;
+  unicode-bidi: bidi-override !important;
+  direction: unset !important;
+  text-align: right;
+}
+
+.slick-slider *, .uploadcare--dialog * {
+  direction: ltr;
+}
+
+:not(.slick-slider *, .uploadcare--dialog *) {
+  text-align: right;
+  direction: rtl;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.modal-open .modal, .modal-open .modal *, .modal .modal-open * {
+  overflow-y: hidden;
+}
+
+.modal, .modal * {
+  border-radius: 0;
+}
+.modal h5 {
+  font-family: "lalezar";
+  color: #00366b;
+  font-size: 2rem;
+}
+.modal .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 7px #666;
+  border: none;
+}
+
+a {
+  font-family: "vazir-regular" !important;
+}
+a:hover {
+  text-decoration: none;
+}
+
+i {
+  vertical-align: middle;
+}
+
+p {
+  font-family: "vazir-regular";
+}
+
+.require {
+  color: tomato;
+}
+
+input, textarea, button, span.btn, small, address, .details span, q, strong {
+  font-family: "vazir-regular" !important;
+}
+
+.avatar {
+  font-size: 1rem;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #adb5bd;
+  align-items: center;
+  justify-content: center;
+}
+
+label, .label {
+  font-family: "lalezar";
+  font-size: 1.3rem;
+}
+
+.toTop {
+  text-align: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 9999999;
+}
+.toTop a {
+  background-color: dodgerblue;
+  border-radius: 50%;
+  padding: 13px 14px;
+}
+.toTop a:hover {
+  background-color: #004384;
+}
+
+.brand-name {
+  font-family: "Righteous", cursive !important;
+  color: dodgerblue;
+  font-size: 1.6rem;
+}
+
+.nav-link:not(.active-nav) {
+  color: #efefef;
+}
+.nav-link:not(.active-nav):hover {
+  color: #bcbcbc;
+}
+
+.active-nav {
+  color: dodgerblue;
+}
+.active-nav:hover {
+  color: #0077ea;
+}
+
+.hero .nav-side {
+  z-index: 9999999 !important;
+  display: none;
+}
+@media only screen and (min-width: 1001px) {
+  .hero .nav-side {
+    display: none !important;
+  }
+}
+.hero .nav-btn {
+  background-color: transparent !important;
+  color: #ececec;
+  opacity: 0.7;
+}
+.hero .nav-btn:hover {
+  color: #ececec !important;
+  opacity: 1 !important;
+}
+@media only screen and (min-width: 1001px) {
+  .hero .nav-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 1000px) {
+  .hero nav {
+    display: none;
+  }
+}
+.hero nav a.nav-link {
+  font-family: "vazir-regular";
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #020a26;
+}
+footer h5 {
+  font-size: 2rem !important;
+}
+
+.canvas {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom right, #000315 0%, #060454 100%);
+  width: 100%;
+  height: 500px;
+}
+
+.animation-container {
+  display: block;
+  position: relative;
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.animation-container .lightning-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  transform: translateY(-50%);
+}
+.animation-container .lightning-container .lightning {
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  transform-origin: 6px 6px;
+  animation-name: woosh;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-direction: alternate;
+}
+.animation-container .lightning-container .lightning.white {
+  background-color: white;
+  box-shadow: 0px 50px 50px 0px rgba(255, 255, 255, 0.3);
+}
+.animation-container .lightning-container .lightning.red {
+  background-color: #fc7171;
+  box-shadow: 0px 50px 50px 0px rgba(252, 113, 113, 0.3);
+  animation-delay: 0.2s;
+}
+.animation-container .boom-container {
+  position: absolute;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  transform: translateY(-50%);
+  left: 200px;
+  top: -145px;
+}
+.animation-container .boom-container .shape {
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  transform-origin: center center;
+}
+.animation-container .boom-container .shape.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transform-origin: 50% 80%;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  margin-left: -15px;
+  border-width: 0 2.5px 5px 2.5px;
+  border-color: transparent transparent #42e599 transparent;
+  animation-name: boom-triangle;
+}
+.animation-container .boom-container .shape.triangle.big {
+  margin-left: -25px;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent yellow transparent;
+  animation-name: boom-triangle-big;
+}
+.animation-container .boom-container .shape.disc {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #bc85ee;
+  animation-name: boom-disc;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+.animation-container .boom-container .shape.circle {
+  width: 20px;
+  height: 20px;
+  animation-name: boom-circle;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  border-radius: 100%;
+  margin-left: -30px;
+}
+.animation-container .boom-container .shape.circle.white {
+  border: 1px solid white;
+}
+.animation-container .boom-container .shape.circle.big {
+  width: 40px;
+  height: 40px;
+  margin-left: 0px;
+}
+.animation-container .boom-container .shape.circle.big.white {
+  border: 2px solid white;
+}
+.animation-container .boom-container .shape:after {
+  background-color: rgba(178, 215, 232, 0.2);
+}
+.animation-container .boom-container .shape.triangle, .animation-container .boom-container .shape.circle, .animation-container .boom-container .shape.circle.big, .animation-container .boom-container .shape.disc {
+  animation-delay: 0.38s;
+  animation-duration: 3s;
+}
+.animation-container .boom-container .shape.circle {
+  animation-delay: 0.6s;
+}
+.animation-container .boom-container.second {
+  left: 485px;
+  top: 155px;
+}
+.animation-container .boom-container.second .shape.triangle, .animation-container .boom-container.second .shape.circle, .animation-container .boom-container.second .shape.circle.big, .animation-container .boom-container.second .shape.disc {
+  animation-delay: 1.9s;
+}
+.animation-container .boom-container.second .shape.circle {
+  animation-delay: 2.15s;
+}
+
+@keyframes woosh {
+  0% {
+    width: 12px;
+    transform: translate(0px, 0px) rotate(-35deg);
+  }
+  15% {
+    width: 50px;
+  }
+  30% {
+    width: 12px;
+    transform: translate(214px, -150px) rotate(-35deg);
+  }
+  30.1% {
+    transform: translate(214px, -150px) rotate(46deg);
+  }
+  50% {
+    width: 110px;
+  }
+  70% {
+    width: 12px;
+    transform: translate(500px, 150px) rotate(46deg);
+  }
+  70.1% {
+    transform: translate(500px, 150px) rotate(-37deg);
+  }
+  85% {
+    width: 50px;
+  }
+  100% {
+    width: 12px;
+    transform: translate(700px, 0) rotate(-37deg);
+  }
+}
+@keyframes boom-circle {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+@keyframes boom-triangle-big {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(2.5) translate(50px, -50px) rotate(360deg);
+  }
+}
+@keyframes boom-triangle {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    transform: scale(3) translate(20px, 40px) rotate(360deg);
+  }
+}
+@keyframes boom-disc {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(2) translate(-70px, -30px);
+  }
+}
+header {
+  position: absolute;
+  top: 35%;
+  z-index: 99999999999999;
+}
+@media only screen and (min-width: 550px) and (max-width: 991.5px) {
+  header {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 550px) {
+  header {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+header h1 {
+  font-family: "sogand";
+  color: #efefef;
+  font-size: 4.5rem;
+  line-height: 4rem;
+  letter-spacing: 5px;
+}
+@media only screen and (min-width: 1px) and (max-width: 550px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+.hero {
+  position: relative;
+  z-index: 99999;
+  background-color: #000315;
+}
+
+.important-text {
+  font-family: "vazir-regular";
+  color: #00509e;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.addExam-section .change-settings {
+  z-index: 99;
+  height: 480px !important;
+  transition: 400ms;
+  position: relative;
+  background-color: #7cafc4;
+  padding: 4rem 2.5rem 6rem 2.5rem;
+  border-radius: 15px;
+}
+.addExam-section .change-settings span.fa-angle-left {
+  color: #666 !important;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 0.8rem;
+  position: absolute;
+  top: 50%;
+  left: -2.5rem;
+  transform: translate(0, -50%);
+}
+@media only screen and (min-width: 1px) and (max-width: 991.5px) {
+  .addExam-section .change-settings span.fa-angle-left {
+    display: none;
+  }
+}
+.addExam-section .change-settings .select-part {
+  background-image: linear-gradient(to right, rgba(234, 236, 235, 0.2), transparent, rgba(234, 236, 235, 0.2));
+  box-shadow: -1 -1 20px rgba(234, 236, 235, 0.25);
+  transition: 400ms;
+}
+.addExam-section .change-settings .select-part:hover {
+  transform: translateY(-8px);
+}
+
+.hide-setting {
+  transform: translateX(100%);
+  position: absolute !important;
+}
+
+.exam-questions {
+  transition: 600ms;
+  position: relative;
+  background-color: #efefef;
+  border-radius: 15px;
+}
+.exam-questions input::placeholder {
+  font-size: 13px;
+}
+.exam-questions .question {
+  font-family: "lalezar";
+  color: #2c2c2c;
+  font-size: 1.3rem;
+}
+.exam-questions .item {
+  font-family: "vazir-regular";
+  font-weight: 600;
+}
+
+.action-btn {
+  transition: 600ms;
+  position: relative;
+}
+
+.pagination {
+  background-color: #7cafc4;
+  border-radius: 15px;
+  width: 400px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination .page {
+  cursor: pointer;
+  margin: 0 5px;
+  width: 40px;
+  height: 40px;
+  background-image: linear-gradient(to right, rgba(234, 236, 235, 0.4), rgba(234, 236, 235, 0.1), rgba(234, 236, 235, 0.4));
+  transition: 400ms;
+  font-family: "vazir-regular";
+  color: #fff;
+  font-size: 1rem;
+  line-height: 40px;
+  text-align: center;
+}
+.pagination .page:hover {
+  transform: translateY(-3px);
+}
+
+/*# sourceMappingURL=addExam.css.map */

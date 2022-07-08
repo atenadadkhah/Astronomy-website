@@ -1,0 +1,13 @@
+@import "info";
+body{
+  background-color: $bg-hero !important;
+}
+.ranking{
+  padding: 2rem;
+  hr{
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .best{
+    @include textStyle("lalezar",1.5rem,$white-text)
+  }
+}

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Noto+Sans&family=Nunito:wght@600&family=Play&family=Righteous&family=The+Nautigal&display=swap");
+@font-face {
+  font-family: "sogand";
+  src: url("../../fonts/sogand/SOGAND.ttf") format("ttf");
+  src: url("../../fonts/sogand/SOGAND.eot") format("eot");
+  src: url("../../fonts/sogand/SOGAND.woff") format("woff");
+  src: url("../../fonts/sogand/SOGAND.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir-regular";
+  src: url("../../fonts/vazir/Vazir-Regular.ttf") format("ttf");
+  src: url("../../fonts/vazir/Vazir-Regular.eot") format("eot");
+  src: url("../../fonts/vazir/Vazir-Regular.woff") format("woff");
+  src: url("../../fonts/vazir/Vazir-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "lalezar";
+  src: url("../../fonts/lalezar/Lalezar-Regular.ttf") format("ttf");
+  src: url("../../fonts/lalezar/Lalezar-Regular.eot") format("eot");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff") format("woff");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff2") format("woff2");
+}
+* {
+  font-family: "vazir-regular" !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav .navbar-brand {
+  display: inline-block;
+  margin: 20px 30px;
+  font-family: "vazir-regular";
+  color: dodgerblue;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=baseMain.css.map */

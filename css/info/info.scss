@@ -1,0 +1,17 @@
+@import "../var","../mixin","../fonts", "../base/base";
+body{
+  background-color: #000;
+}
+.card-showInfo{
+  .card{
+    background-color: transparent;
+  }
+    margin-bottom: 30px;
+  h4{
+    @include textStyle("lalezar",$color:darken(#fff,30%));
+  }
+  p{
+    @include textStyle("vazir-regular",$color:$muted-text)
+  }
+}
+

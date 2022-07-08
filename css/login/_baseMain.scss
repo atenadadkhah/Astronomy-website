@@ -1,0 +1,17 @@
+body{
+  background-color: $bg-hero;
+  .log-section{
+    position: relative;
+  }
+  .color-1{
+    @include position(absolute,0,0);
+    fill: $bg-orange;
+  }
+  .color-2{
+    @include position(absolute,$r:0,$b:0);
+    fill: $bg-info;
+  }
+}
+small{
+  @include textStyle("vazir-regular");
+}

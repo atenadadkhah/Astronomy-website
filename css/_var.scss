@@ -1,0 +1,23 @@
+//colors
+$bg-hero: #000315;
+$bg-info:#17a2b8;
+$bg-orange:orangered;
+$bg-yellow:yellow;
+$bg-purple:blueviolet;
+$bg-blue: dodgerblue;
+$bg-white: rgba(0, 0, 0, 0.03);
+$bg-secondary-blue:#7cafc4;
+$bg-lightColors:(
+        "blue":$bg-blue,
+        "red":$bg-orange,
+        "yellow":$bg-yellow,
+        "purple":$bg-purple,
+);
+
+//text colors
+$muted-text: #868585;
+$white-text: #efefef;
+
+//fonts
+$font-primary:"sogand";
+$font-secondary:"vazir-regular";

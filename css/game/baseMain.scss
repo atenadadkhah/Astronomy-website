@@ -1,0 +1,14 @@
+@import "../var","../mixin","../fonts";
+*{
+  font-family: $font-secondary !Important;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  .navbar-brand{
+    display: inline-block;
+    margin: 20px 30px;
+    @include textStyle($font-secondary,1.5rem,$bg-blue)
+  }
+}

@@ -1,0 +1,93 @@
+@import "../var","../mixin","../fonts", "../base/base","baseMain";
+.hero{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center  2%;
+  background-size: cover;
+  height: 100vh;
+  & +header{
+    h1{
+      @include textStyle("sogand",12rem,lighten($muted-text,30%),6px);
+      opacity: .6;
+      @include media(550px,750px){
+        font-size: 10rem;
+      }
+      @include media(1px,550px){
+        font-size: 8rem;
+      }
+    }
+    @include position(absolute,50%,50%);
+    transform: translate(-50%,-50%);
+  }
+}
+.explain{
+  background-image:linear-gradient(to right , $bg-hero, #01082b,$bg-hero);
+  .title-explain{
+    @include textStyle("sogand",$letter:3px);
+  }
+  p{
+    @include textStyle("vazir-regular");
+  }
+}
+.divider{
+  @include size(100px,1px);
+  background-color: $muted-text;
+}
+.info{
+  background-color: $bg-white;
+  .img{
+    @include media(1px,767.5px){
+      height: 550px;
+    }
+  }
+  .property{
+    h5{
+      @include textStyle("lalezar",2rem,darken($muted-text,15%))
+    }
+    .explain-property{
+      @include textStyle("vazir-regular",1.1rem,$muted-text)
+    }
+  }
+}
+.end-info{
+  background:$bg-hero;
+  svg{
+    fill: $bg-blue;
+  }
+  p{
+    @include textStyle("vazir-regular",$color:$muted-text);
+  }
+}
+.img-1{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left  top;
+  background-size: contain;
+  background-color: #060606;
+}
+.img-2{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  background-color: #060606;
+}
+input,textarea,.btn{
+  @include textStyle("vazir-regular");
+}
+.uploadcare--widget__button.uploadcare--widget__button_type_open {
+  background-color: #15bbe0;
+  @include textStyle("vazir-regular",13px)
+}
+[aria-label="Close"]{
+  @include media(1px,759.5px){
+    position: absolute;
+    left: 0;
+  }
+}
+.uploadcare--progress_type_canvas{
+  color: lighten($bg-info,10%) !important;
+}
+.source{
+  @include textStyle("lalezar",1.3rem,$muted-text)
+}

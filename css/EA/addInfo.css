@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Noto+Sans&family=Nunito:wght@600&family=Play&family=Righteous&family=The+Nautigal&display=swap");
+@font-face {
+  font-family: "sogand";
+  src: url("../../fonts/sogand/SOGAND.ttf") format("ttf");
+  src: url("../../fonts/sogand/SOGAND.eot") format("eot");
+  src: url("../../fonts/sogand/SOGAND.woff") format("woff");
+  src: url("../../fonts/sogand/SOGAND.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir-regular";
+  src: url("../../fonts/vazir/Vazir-Regular.ttf") format("ttf");
+  src: url("../../fonts/vazir/Vazir-Regular.eot") format("eot");
+  src: url("../../fonts/vazir/Vazir-Regular.woff") format("woff");
+  src: url("../../fonts/vazir/Vazir-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "lalezar";
+  src: url("../../fonts/lalezar/Lalezar-Regular.ttf") format("ttf");
+  src: url("../../fonts/lalezar/Lalezar-Regular.eot") format("eot");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff") format("woff");
+  src: url("../../fonts/lalezar/Lalezar-Regular.woff2") format("woff2");
+}
+body {
+  overflow-x: hidden;
+  padding: 0 !important;
+  unicode-bidi: bidi-override !important;
+  direction: unset !important;
+  text-align: right;
+}
+
+.slick-slider *, .uploadcare--dialog * {
+  direction: ltr;
+}
+
+:not(.slick-slider *, .uploadcare--dialog *) {
+  text-align: right;
+  direction: rtl;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.modal-open .modal, .modal-open .modal *, .modal .modal-open * {
+  overflow-y: hidden;
+}
+
+.modal, .modal * {
+  border-radius: 0;
+}
+.modal h5 {
+  font-family: "lalezar";
+  color: #00366b;
+  font-size: 2rem;
+}
+.modal .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 7px #666;
+  border: none;
+}
+
+a {
+  font-family: "vazir-regular" !important;
+}
+a:hover {
+  text-decoration: none;
+}
+
+i {
+  vertical-align: middle;
+}
+
+p {
+  font-family: "vazir-regular";
+}
+
+.require {
+  color: tomato;
+}
+
+input, textarea, button, span.btn, small, address, .details span, q, strong {
+  font-family: "vazir-regular" !important;
+}
+
+.avatar {
+  font-size: 1rem;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #adb5bd;
+  align-items: center;
+  justify-content: center;
+}
+
+label, .label {
+  font-family: "lalezar";
+  font-size: 1.3rem;
+}
+
+.toTop {
+  text-align: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 9999999;
+}
+.toTop a {
+  background-color: dodgerblue;
+  border-radius: 50%;
+  padding: 13px 14px;
+}
+.toTop a:hover {
+  background-color: #004384;
+}
+
+.brand-name {
+  font-family: "Righteous", cursive !important;
+  color: dodgerblue;
+  font-size: 1.6rem;
+}
+
+.nav-link:not(.active-nav) {
+  color: #efefef;
+}
+.nav-link:not(.active-nav):hover {
+  color: #bcbcbc;
+}
+
+.active-nav {
+  color: dodgerblue;
+}
+.active-nav:hover {
+  color: #0077ea;
+}
+
+.hero .nav-side {
+  z-index: 9999999 !important;
+  display: none;
+}
+@media only screen and (min-width: 1001px) {
+  .hero .nav-side {
+    display: none !important;
+  }
+}
+.hero .nav-btn {
+  background-color: transparent !important;
+  color: #ececec;
+  opacity: 0.7;
+}
+.hero .nav-btn:hover {
+  color: #ececec !important;
+  opacity: 1 !important;
+}
+@media only screen and (min-width: 1001px) {
+  .hero .nav-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 1000px) {
+  .hero nav {
+    display: none;
+  }
+}
+.hero nav a.nav-link {
+  font-family: "vazir-regular";
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #020a26;
+}
+footer h5 {
+  font-size: 2rem !important;
+}
+
+.hero {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center 2%;
+  background-size: cover;
+  height: 100vh;
+}
+.hero + header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero + header h1 {
+  font-family: "sogand";
+  color: #d2d2d2;
+  font-size: 12rem;
+  letter-spacing: 6px;
+  opacity: 0.6;
+}
+@media only screen and (min-width: 550px) and (max-width: 750px) {
+  .hero + header h1 {
+    font-size: 10rem;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 550px) {
+  .hero + header h1 {
+    font-size: 8rem;
+  }
+}
+
+.explain {
+  background-image: linear-gradient(to right, #000315, #01082b, #000315);
+}
+.explain .title-explain {
+  font-family: "sogand";
+  letter-spacing: 3px;
+}
+.explain p {
+  font-family: "vazir-regular";
+}
+
+.divider {
+  width: 100px;
+  height: 1px;
+  background-color: #868585;
+}
+
+.info {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+@media only screen and (min-width: 1px) and (max-width: 767.5px) {
+  .info .img {
+    height: 550px;
+  }
+}
+.info .property h5 {
+  font-family: "lalezar";
+  color: #605f5f;
+  font-size: 2rem;
+}
+.info .property .explain-property {
+  font-family: "vazir-regular";
+  color: #868585;
+  font-size: 1.1rem;
+}
+
+.end-info {
+  background: #000315;
+}
+.end-info svg {
+  fill: dodgerblue;
+}
+.end-info p {
+  font-family: "vazir-regular";
+  color: #868585;
+}
+
+.img-1 {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  background-color: #060606;
+}
+
+.img-2 {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  background-color: #060606;
+}
+
+input, textarea, .btn {
+  font-family: "vazir-regular";
+}
+
+.uploadcare--widget__button.uploadcare--widget__button_type_open {
+  background-color: #15bbe0;
+  font-family: "vazir-regular";
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 759.5px) {
+  [aria-label=Close] {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.uploadcare--progress_type_canvas {
+  color: #1fc8e3 !important;
+}
+
+.source {
+  font-family: "lalezar";
+  color: #868585;
+  font-size: 1.3rem;
+}
+
+/*# sourceMappingURL=addInfo.css.map */

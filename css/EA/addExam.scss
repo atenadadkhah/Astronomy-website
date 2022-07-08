@@ -1,0 +1,91 @@
+@import "../var","../mixin","../fonts","../base/base","canvas";
+header{
+  @include position(absolute,35%,$z:99999999999999);
+  @include media(550px,991.5px){
+    right: 50%;
+    transform: translateX(50%);
+  }
+  @include media(1px,550px){
+    right: 50%;
+    transform: translateX(50%);
+  }
+  h1{
+    @include textStyle("sogand",4.5rem,$white-text,5px,4rem);
+    @include media(1px,550px){
+      font-size: 3rem;
+    }
+  }
+}
+.hero{
+  @include position(relative,$z:99999);
+  background-color: $bg-hero;
+}
+.important-text{
+  @include textStyle("vazir-regular",1.3rem,darken($bg-blue,25%),$weight:600);
+}
+.addExam-section{
+   .change-settings{
+     z-index: 99;
+     height: 480px !important;
+     transition:400ms;
+     position: relative;
+     background-color: $bg-secondary-blue;
+     padding: 4rem 2.5rem 6rem 2.5rem;
+     border-radius: 15px;
+     span.fa-angle-left{
+       @include textStyle($color:#666 !important,$size:2rem);
+       cursor: pointer;
+       margin-left: .8rem;
+       @include position(absolute,50%,-2.5rem);
+       @include media(1px,991.5px){
+         display: none;
+       }
+       transform: translate(0,-50%);
+     }
+     .select-part{
+       background-image: linear-gradient(to right, rgba(234, 236, 235, 0.2),transparent,rgba(234, 236, 235, 0.2));
+       box-shadow: -1 -1 20px rgba(234, 236, 235, 0.25);
+       @include move-top(8px);
+     }
+   }
+}
+.hide-setting{
+  transform: translateX(100%);
+  position: absolute !important;
+}
+.exam-questions{
+    transition: 600ms;
+    position: relative;
+    background-color: $white-text;
+    border-radius: 15px;
+    input::placeholder{
+      font-size: 13px;
+    }
+  .question{
+    @include textStyle("lalezar",1.3rem, darken($muted-text,35%))
+  }
+  .item{
+    @include textStyle($font-secondary,$weight:600)
+  }
+  }
+.action-btn{
+  transition: 600ms;
+  position: relative;
+}
+.pagination{
+  background-color: $bg-secondary-blue;
+  border-radius: 15px;
+  @include size(400px,55px,flex);
+  justify-content: center;
+  align-items: center;
+  .page{
+    cursor: pointer;
+    margin: 0 5px;
+    @include size(40px,40px);
+    background-image: linear-gradient(to right, rgba(234, 236, 235, 0.4),rgba(234, 236, 235, 0.1),rgba(234, 236, 235, 0.4));
+    @include move-top(3px);
+    @include textStyle("vazir-regular",1rem,#fff,$line:40px,$align:center)
+  }
+}
+
+
